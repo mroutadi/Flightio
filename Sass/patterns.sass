@@ -1,0 +1,94 @@
+//COLORS
+$yellow    : #FFEF00
+$darkyellow     : #FFDF00
+$white          : #FFFFFF
+$milky          : #FDFDFD
+$gray           : #E3E3E3
+$darkgray       : #B7B7B7
+$seablue        : #33B8BF
+$darkblue       : #2E5D6A
+
+//FONTS
+@font-face
+  font-family: "YekanRegular"
+  src: url('../Fonts/yekan-regular.ttf') format('ttf'),
+  url('../Fonts/yekan-regular.woff') format('woff'),
+  url('../Fonts/yekan-regular.eot') format('eot')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: "YekanMedium"
+  src: url('../Fonts/yekan-regular.ttf') format('ttf'),
+  url('../Fonts/yekan-regular.woff') format('woff'),
+  url('../Fonts/yekan-regular.eot') format('eot')
+  font-weight: 500
+  font-style: normal
+@font-face
+  font-family: "YekanBold"
+  src: url('../Fonts/yekan-regular.ttf') format('ttf'),
+  url('../Fonts/yekan-regular.woff') format('woff'),
+  url('../Fonts/yekan-regular.eot') format('eot')
+  font-weight: bold
+  font-style: normal
+@font-face
+  font-family: "IranSans"
+  src: url('../Fonts/IRANSansWeb(FaNum) Medium.ttf') format('ttf'),
+  url('../Fonts/IRANSansWeb(FaNum) Medium.woff') format('woff'),
+  url('../Fonts/IRANSansWeb(FaNum) Medium.eot') format('eot')
+  font-weight: bold
+  font-style: normal
+
+//Animations
+@keyframes rotate
+  0%
+    transform: rotate(0deg) scale(1)
+  50%
+    transform: scale(1.1) rotate(540deg)
+  100%
+    transform: rotate(3600deg) scale(1)
+@-webkit-keyframes hvr-pulse-grow 
+  to 
+    -webkit-transform: scale(1.1)
+    transform: scale(1.1)
+
+@keyframes hvr-pulse-grow 
+  to 
+    -webkit-transform: scale(1.1)
+    transform: scale(1.1)
+
+@keyframes appear
+  0%
+    opacity: 0.2
+  100%
+    opacity: 1  
+  
+
+.hvr-pulse-grow 
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+  animation-duration: 0.2s
+  &:hover, &:focus, &:active 
+    -webkit-animation-name: hvr-pulse-grow
+    animation-name: hvr-pulse-grow
+    -webkit-animation-duration: 0.2s
+    animation-duration: 0.2s
+    -webkit-animation-timing-function: linear
+    animation-timing-function: linear
+    -webkit-animation-iteration-count: infinite
+    animation-iteration-count: infinite
+    -webkit-animation-direction: alternate
+    animation-direction: alternate
+
+//FS
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  border-collapse: collapse
+  max-width: 100%
+
+body
+  background-color: $white

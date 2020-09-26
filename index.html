@@ -1,0 +1,451 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Sass/header.css">
+  <link rel="stylesheet" href="Sass/index.css">
+  <link rel="stylesheet" href="Sass/footer.css">
+  <link rel="shortcut icon" href="images/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+  <title>Altrabo</title>
+</head>
+
+<body>
+  <header>
+    <div class="Toggle" onclick="myFunction(this)">
+      <div class="Toggle__icon bar1"></div>
+      <div class="Toggle__icon bar2"></div>
+      <div class="Toggle__icon bar3"></div>
+    </div>
+    <div class="Navbar">
+      <div class="Navbar__lang">
+        <a href="#" class="lang__left--arrow" onclick="lang__change()">
+          &#60;
+          <span class="tooltiptext">
+            <span>English</span>
+            <img src="images/flag-en.png">
+          </span>
+        </a>
+        <span class="lang--name">فارسی</span>
+        <img class="lang--flag" src="images/flag-fa.png">
+        <a href="#" class="lang__right--arrow" onclick="lang__change()">
+          &#62;
+          <span class="tooltiptext">
+            <span>English</span>
+            <img src="images/flag-en.png">
+          </span>
+        </a>
+      </div>
+      <div class="Navbar__buttons">
+        <div class="Navbar__button">
+          <a href="#">بلیت هواپیما</a>
+        </div>
+        <div class="Navbar__button">
+          <a href="#">بلیط قطار</a>
+        </div>
+        <div class="Navbar__button">
+          <a href="#">بلیت اتوبوس</a>
+        </div>
+        <div class="Navbar__button">
+          <a href="#">رزرو هتل</a>
+        </div>
+        <div class="Navbar__button">
+          <span><img src="images/account.png" alt="account"></span>
+          <a href="#">ورود/عضویت</a>
+        </div>
+      </div>
+      <div class="Navbar__logo">
+        <img src="images/Logo.png" alt="Altrabo">
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="Search">
+      <div class="Search__Viech">
+        <ul class="Search__ul">
+          <li class="Search__li Search__li--selected" onclick="change__search__li(0)">
+            <span class="Search__li--span">
+              <span class="Search__Viech--logo">
+                <img src="images/plain.png" alt="plain">
+              </span>
+            <span class="Search__Viech--text">بلیت هواپیما</span>
+            </a>
+          </li>
+          <li class="Search__li" onclick="change__search__li(1)">
+            <span class="Search__li--span">
+              <span class="Search__Viech--logo">
+                  <img src="images/train.png" alt="train">
+              </span>
+            <span class="Search__Viech--text">بلیت قطار</span>
+            </a>
+          </li>
+          <li class="Search__li" onclick="change__search__li(2)">
+            <span class="Search__li--span">
+              <span class="Search__Viech--logo">
+                  <img src="images/bus.png" alt="bus">
+              </span>
+            <span class="Search__Viech--text">بلیت اتوبوس</span>
+            </a>
+          </li>
+          <li class="Search__li" onclick="change__search__li(3)">
+            <span class="Search__li--span">
+              <span class="Search__Viech--logo">
+                  <img src="images/hotel.png" alt="hotel">
+              </span>
+            <span class="Search__Viech--text">رزرو هتل</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="Search__Resault">
+        <form id="Search" action="#">
+          <div class="Search__Type">
+            <select name="Passengers" id="Search__Type--Passenger">
+              <option value="1 نفر بزرگسال">1 نفر بزگسال</option>
+              <option value="2 نفر بزرگسال">2 نفر بزگسال</option>
+              <option value="3 نفر بزرگسال">3 نفر بزگسال</option>
+              <option value="4 نفر بزرگسال">4 نفر بزگسال</option>
+              <option value="5 نفر بزرگسال">5 نفر بزگسال</option>
+            </select>
+          </div>
+          <div class="Search__Type">
+            <select name="isRound" id="Search__Type--isRound">
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+                <option value="یک طرفه">یک طرفه</option>
+                <option value="رفت و برگشت">رفت و برگشت</option>
+            </select>
+          </div>
+          <div class="Search__Information">
+            <div class="Search__Information--start">
+              <div class="Search__Information--start-logo">
+                <img src="images/location.png" alt="location">
+                <span>مبدا <span>|</span></span>
+              </div>
+              <input type="text" name="start" id="Search__Information--SPoint">
+            </div>
+            <div class="Search__Information--change" onclick="change__destinations()">
+              <img src="images/change.png" alt="change">
+            </div>
+            <div class="Search__Information--finish">
+              <div class="Search__Information--finish-logo">
+                <img src="images/location.png" alt="location">
+                <span>مقصد <span>|</span></span>
+              </div>
+              <input type="text" name="destination" id="Search__Information--FPoint">
+            </div>
+            <div class="Search__Information--date">
+              <div class="Search__Information--date-logo">
+                <img src="images/date.png" alt="date">
+                <span>تاریخ <span>|</span></span>
+              </div>
+              <input type="text" name="Date" id="Search__Information--Date">
+            </div>
+            <span></span>
+            <input type="submit" name="Submit" id="Search__Information--submit" value="جستجو">
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="Information ">
+      <div class="Info ">
+        <img src="images/hotel2.png " alt="hotel ">
+        <div class="Info--topic ">
+          لورم اپیسوم
+        </div>
+        <div class="Info--explain ">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+        </div>
+      </div>
+      <div class="Info ">
+        <img src="images/globe.png " alt="globe ">
+        <div class="Info--topic ">
+          لورم اپیسوم
+        </div>
+        <div class="Info--explain ">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+        </div>
+      </div>
+      <div class="Info ">
+        <img src="images/suitcase.png " alt="suitcase ">
+        <div class="Info--topic ">
+          لورم اپیسوم
+        </div>
+        <div class="Info--explain ">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+        </div>
+      </div>
+    </div>
+    <div class="Offers ">
+      <div class="Offers__Topic ">
+        پیشنهادهای جهانگردی آلترابو
+      </div>
+      <div class="Offers__List">
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer1.jpg " alt="1 ">
+          </div>
+          <div class="Offers__item--name ">
+            استانبول
+          </div>
+        </div>
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer2.jpg " alt="2 ">
+          </div>
+          <div class="Offers__item--name ">
+            پکن
+          </div>
+        </div>
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer3.jpg " alt="3 ">
+          </div>
+          <div class="Offers__item--name ">
+            دبی
+          </div>
+        </div>
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer4.jpg " alt="4 ">
+          </div>
+          <div class="Offers__item--name ">
+            کوالالامپور
+          </div>
+        </div>
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer1.jpg " alt="1 ">
+          </div>
+          <div class="Offers__item--name ">
+            استانبول
+          </div>
+        </div>
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer2.jpg " alt="2 ">
+          </div>
+          <div class="Offers__item--name ">
+            پکن
+          </div>
+        </div>
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer3.jpg " alt="3 ">
+          </div>
+          <div class="Offers__item--name ">
+            دبی
+          </div>
+        </div>
+        <div class="Offers__item">
+          <div class="Offers__item--img ">
+            <img src="images/offer4.jpg " alt="4 ">
+          </div>
+          <div class="Offers__item--name ">
+            کوالالامپور
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Offers Offers2">
+      <div class="Offers__Topic ">
+        پیشنهادهای ایرانگردی آلترابو
+      </div>
+      <div class="Offers__List ">
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer5.jpg " alt="5 ">
+          </div>
+          <div class="Offers__item--name ">
+            مشهد
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer6.jpg " alt="6 ">
+          </div>
+          <div class="Offers__item--name ">
+            شیراز
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer7.jpg " alt="7 ">
+          </div>
+          <div class="Offers__item--name ">
+            تبریز
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer5.jpg " alt="5 ">
+          </div>
+          <div class="Offers__item--name ">
+            مشهد
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer6.jpg " alt="6 ">
+          </div>
+          <div class="Offers__item--name ">
+            شیراز
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer7.jpg " alt="7 ">
+          </div>
+          <div class="Offers__item--name ">
+            تبریز
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer5.jpg " alt="5 ">
+          </div>
+          <div class="Offers__item--name ">
+            مشهد
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer6.jpg " alt="6 ">
+          </div>
+          <div class="Offers__item--name ">
+            شیراز
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer7.jpg " alt="7 ">
+          </div>
+          <div class="Offers__item--name ">
+            تبریز
+          </div>
+        </div>
+        <div class="Offers__item ">
+          <div class="Offers__item--img ">
+            <img src="images/offer8.jpg " alt="8 ">
+          </div>
+          <div class="Offers__item--name ">
+            اصفهان
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Subscribe ">
+      <div class="Subscribe__form ">
+        <div class="Subscribe__label ">
+          با عضویت در خبرنامه آلترابو از پیشنهادات شگفت انگیز ما زودتر از بقیه با خبر میشین
+        </div>
+        <form action="# " id="Subscribe ">
+          <input type="submit " name="Submit " id="S_Submit" value="عضویت در خبرنامه " class="hvr-pulse-grow">
+          <input type="Email " name="Email " id="S_Email" placeholder="آدرس ایمیلتان را وارد کنید ">
+        </form>
+      </div>
+      <div class="Subscribe__img">
+        <img src="images/subscribe.png " alt="subscribe">
+      </div>
+    </div>
+    <div class="Ad ">
+      <div class="Ad__Topic ">هر جای دنیا که برید <span>آلترابو </span>همراهتونه!</div>
+      <div class="Ad__Places ">
+        <div class="Ad__Places--place ">
+          <img src="images/Beauty1.png " alt="1 ">
+        </div>
+        <div class="Ad__Places--place ">
+          <img src="images/Beauty2.png " alt="2 ">
+        </div>
+        <div class="Ad__Places--place ">
+          <img src="images/Beauty3.png " alt="3 ">
+        </div>
+        <div class="Ad__Places--place ">
+          <img src="images/Beauty4.png " alt="4 ">
+        </div>
+        <div class="Ad__Places--place ">
+          <img src="images/Beauty5.png " alt="5 ">
+        </div>
+        <div class="Ad__Places--place ">
+          <img src="images/Beauty6.png " alt="6 ">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer__SN ">
+      <a href="# ">
+        <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 61.538 50 "><g transform="translate(0 0) "><path class="a " d="M61.538,53.919a26.3,26.3,0,0,1-7.269,1.992,12.545,12.545,0,0,0,5.55-6.973,25.212,25.212,0,0,1-8,3.054A12.615,12.615,0,0,0,30,60.619a12.99,12.99,0,0,0,.292,2.877,35.709,35.709,0,0,1-26-13.2A12.619,12.619,0,0,0,8.162,67.162a12.459,12.459,0,0,1-5.7-1.554v.138a12.674,12.674,0,0,0,10.108,12.4,12.592,12.592,0,0,1-3.308.415,11.155,11.155,0,0,1-2.388-.215,12.736,12.736,0,0,0,11.788,8.788A25.349,25.349,0,0,1,3.019,92.512,23.627,23.627,0,0,1,0,92.338,35.517,35.517,0,0,0,19.354,98c23.215,0,35.908-19.231,35.908-35.9,0-.558-.019-1.1-.046-1.631A25.168,25.168,0,0,0,61.538,53.919Z
+              " transform="translate(0 -48) "/></g></svg>
+      </a>
+      <a href="# ">
+        <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 50 50 "><g transform="translate(0 15.625) "><rect width="11.181 " height="34.375 "/></g><g transform="translate(15.625 15.625) "><path d="M186.013,160.4c-.119-.038-.231-.078-.356-.113-.15-.034-.3-.062-.453-.087a10.021,10.021,0,0,0-2.006-.2c-6.519,0-10.653,4.741-12.016,6.572V160H160v34.375h11.181v-18.75s8.45-11.769,12.016-3.125v21.875h11.178v-23.2A11.149,11.149,0,0,0,186.013,160.4Z
+              " transform="translate(-160 -160) "/></g><circle cx="5.469 " cy="5.469 " r="5.469 "/></svg>
+      </a>
+      <a href="# ">
+        <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 80 50 "><g transform="translate(55 10) "><path d="M367,170V160h-5v10H352v5h10v10h5V175h10v-5Z " transform="translate(-352 -160) "/></g><g transform="translate(0 0) "><path d="M25,116v10H39.145A15,15,0,1,1,25,106a14.778,14.778,0,0,1,9.715,3.62l6.57-7.54A24.776,24.776,0,0,0,25,96a25,25,0,1,0,25,25v-5Z
+              " transform="translate(0 -96) "/></g></svg>
+      </a>
+      <a href="# ">
+        <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 50 50 "><path d="M34.375,0H15.625A15.627,15.627,0,0,0,0,15.625v18.75A15.627,15.627,0,0,0,15.625,50h18.75A15.627,15.627,0,0,0,50,34.375V15.625A15.627,15.627,0,0,0,34.375,0ZM45.313,34.375A10.95,10.95,0,0,1,34.375,45.313H15.625A10.95,10.95,0,0,1,4.688,34.375V15.625A10.95,10.95,0,0,1,15.625,4.688h18.75A10.95,10.95,0,0,1,45.313,15.625Z
+              "/><g transform="translate(12.5 12.5) "><path d="M140.5,128A12.5,12.5,0,1,0,153,140.5,12.5,12.5,0,0,0,140.5,128Zm0,20.313a7.813,7.813,0,1,1,7.813-7.812A7.823,7.823,0,0,1,140.5,148.313Z " transform="translate(-128 -128) " /></g><g transform="translate(36.772
+              9.897) "><circle cx="1.666 " cy="1.666 " r="1.666 "/></g></svg>
+      </a>
+    </div>
+    <div class="footer__content ">
+      <div class="footer__content--ticket ">
+        <a href="# ">بلیت هواپیما</a>
+        <a href="# ">بلیت اتوبوس</a>
+        <a href="# ">بلیت قطار</a>
+        <a href="# ">رزرو هتل</a>
+      </div>
+      <div class="footer__content--contact-us ">
+        <div class="footer__content--topic ">
+          تماس با آلبراتو
+        </div>
+        <div class="footer__content--text ">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+        </div>
+      </div>
+      <div class="footer__content--about-us ">
+        <div class="footer__content--topic ">
+          تماس با آلبراتو
+        </div>
+        <div class="footer__content--text ">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+        </div>
+      </div>
+    </div>
+    <div class="footer__rights ">
+      تمامی حقوق این وبسایت متعلق به مجموعه آلترابو است
+    </div>
+  </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.1/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-slick/0.27.0/react-slick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-slick/0.27.0/react-slick.min.js"></script>
+<script src="JS/index.js"></script>
+<script src="/path/to/jquery.min.js"></script>
+<script src="/path/to/slick.js"></script>
+
+</html>

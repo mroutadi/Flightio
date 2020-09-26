@@ -1,0 +1,614 @@
+@font-face {
+  font-family: "YekanRegular";
+  src: url("../Fonts/yekan-regular.ttf") format("ttf"), url("../Fonts/yekan-regular.woff") format("woff"), url("../Fonts/yekan-regular.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YekanMedium";
+  src: url("../Fonts/yekan-regular.ttf") format("ttf"), url("../Fonts/yekan-regular.woff") format("woff"), url("../Fonts/yekan-regular.eot") format("eot");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YekanBold";
+  src: url("../Fonts/yekan-regular.ttf") format("ttf"), url("../Fonts/yekan-regular.woff") format("woff"), url("../Fonts/yekan-regular.eot") format("eot");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IranSans";
+  src: url("../Fonts/IRANSansWeb(FaNum) Medium.ttf") format("ttf"), url("../Fonts/IRANSansWeb(FaNum) Medium.woff") format("woff"), url("../Fonts/IRANSansWeb(FaNum) Medium.eot") format("eot");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1) rotate(540deg);
+            transform: scale(1.1) rotate(540deg);
+  }
+  100% {
+    -webkit-transform: rotate(3600deg) scale(1);
+            transform: rotate(3600deg) scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1) rotate(540deg);
+            transform: scale(1.1) rotate(540deg);
+  }
+  100% {
+    -webkit-transform: rotate(3600deg) scale(1);
+            transform: rotate(3600deg) scale(1);
+  }
+}
+
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+}
+
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-collapse: collapse;
+  max-width: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 2.5vw;
+  background-color: #FFFFFF;
+  border-radius: 0 0 50px 50px;
+  width: 75vw;
+  height: 100px;
+  position: relative;
+  z-index: 9;
+}
+
+@media screen and (max-width: 1070.0701px) {
+  header {
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 740.047px) {
+  header {
+    position: fixed;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 740.047px) {
+  header .MobNav {
+    display: block;
+    text-align: left;
+    background-color: #E3E3E3;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+}
+
+header .Navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 170px auto 110px;
+      grid-template-columns: 170px auto 110px;
+}
+
+@media screen and (max-width: 1360.0631px) {
+  header .Navbar {
+    -ms-grid-columns: 145px auto 90px;
+        grid-template-columns: 145px auto 90px;
+  }
+}
+
+@media screen and (max-width: 740.047px) {
+  header .Navbar {
+    display: block;
+    text-align: left;
+  }
+}
+
+header .Navbar .Navbar__lang {
+  display: inline;
+  font-size: 1.20rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .Navbar .Navbar__lang:hover a {
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 740.047px) {
+  header .Navbar .Navbar__lang {
+    display: none;
+  }
+}
+
+header .Navbar .Navbar__lang a, header .Navbar .Navbar__lang .lang--name {
+  position: relative;
+  padding: 2.5px;
+  top: 30px;
+  text-decoration: none;
+  color: #2E5D6A;
+  font-family: YekanRegular;
+}
+
+@media screen and (max-width: 1360.0631px) {
+  header .Navbar .Navbar__lang .lang--name {
+    top: 40px;
+    font-size: 1rem;
+    line-height: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 1200.0021px) {
+  header .Navbar .Navbar__lang .lang--name {
+    top: 37.5px;
+    font-size: 1rem;
+    line-height: 0.75rem;
+  }
+}
+
+header .Navbar .Navbar__lang a {
+  font-size: 1.5rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1360.0631px) {
+  header .Navbar .Navbar__lang a {
+    top: 40px;
+    font-size: 1rem;
+    line-height: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 1200.0021px) {
+  header .Navbar .Navbar__lang a {
+    top: 37.5px;
+    font-size: 1rem;
+    line-height: 0.75rem;
+  }
+}
+
+header .Navbar .Navbar__lang a:hover .tooltiptext {
+  visibility: visible;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+header .Navbar .Navbar__lang a .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  height: 25px;
+  background-color: #2E5D6A;
+  color: #E3E3E3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  bottom: 30px;
+  left: 20px;
+  margin-left: -60px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .Navbar .Navbar__lang a .tooltiptext::after {
+  content: "";
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+header .Navbar .Navbar__lang a .tooltiptext img {
+  display: none;
+}
+
+header .Navbar .Navbar__lang img {
+  position: relative;
+  top: 35px;
+  max-width: 30px;
+  max-height: 20px;
+}
+
+@media screen and (max-width: 1360.0631px) {
+  header .Navbar .Navbar__lang img {
+    top: 45px;
+  }
+}
+
+@media screen and (max-width: 1200.0021px) {
+  header .Navbar .Navbar__lang img {
+    top: 42.5px;
+  }
+}
+
+header .Navbar .Mobile__Navbar__lang {
+  display: none;
+  font-size: 1.40rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  text-align: center;
+  bottom: 50px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 740.047px) {
+  header .Navbar .Mobile__Navbar__lang {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    -ms-grid-columns: 70px 90px 40px 70px;
+        grid-template-columns: 70px 90px 40px 70px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+header .Navbar .Mobile__Navbar__lang:hover a {
+  font-weight: bolder;
+}
+
+header .Navbar .Mobile__Navbar__lang a, header .Navbar .Mobile__Navbar__lang .mob__lang--name {
+  position: relative;
+  text-decoration: none;
+  color: #2E5D6A;
+  font-family: YekanRegular;
+}
+
+header .Navbar .Mobile__Navbar__lang a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+header .Navbar .Mobile__Navbar__lang a:last-child {
+  text-align: left;
+}
+
+header .Navbar .Mobile__Navbar__lang a:hover .mob__tooltiptext {
+  visibility: visible;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+header .Navbar .Mobile__Navbar__lang a .mob__tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  height: 25px;
+  background-color: #2E5D6A;
+  color: #E3E3E3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  bottom: 30px;
+  left: 20px;
+  margin-left: -60px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .Navbar .Mobile__Navbar__lang a .mob__tooltiptext::after {
+  content: "";
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+header .Navbar .Mobile__Navbar__lang a .mob__tooltiptext img {
+  display: none;
+}
+
+header .Navbar .Mobile__Navbar__lang img {
+  position: relative;
+  top: 15px;
+  max-width: 30px;
+  max-height: 20px;
+}
+
+header .Navbar .Navbar__buttons {
+  direction: rtl;
+  text-align: right;
+  display: inline;
+}
+
+@media screen and (max-width: 740.047px) {
+  header .Navbar .Navbar__buttons {
+    display: none;
+  }
+}
+
+header .Navbar .Navbar__buttons .Navbar__button {
+  display: inline;
+  position: relative;
+  top: 45%;
+  margin: 25px;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1480.0841px) {
+  header .Navbar .Navbar__buttons .Navbar__button {
+    font-size: 1.15rem;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 1360.0631px) {
+  header .Navbar .Navbar__buttons .Navbar__button {
+    font-size: 1.05rem;
+    margin: 15px;
+  }
+  header .Navbar .Navbar__buttons .Navbar__button span {
+    top: 15px;
+  }
+  header .Navbar .Navbar__buttons .Navbar__button span img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 1260.0621px) {
+  header .Navbar .Navbar__buttons .Navbar__button {
+    font-size: 0.95rem;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 1200.0021px) {
+  header .Navbar .Navbar__buttons .Navbar__button {
+    font-size: 0.9rem;
+  }
+  header .Navbar .Navbar__buttons .Navbar__button span {
+    top: 15px;
+  }
+  header .Navbar .Navbar__buttons .Navbar__button span img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+header .Navbar .Navbar__buttons .Navbar__button a {
+  text-decoration: none;
+  font-family: YekanRegular;
+  color: #2E5D6A;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .Navbar .Navbar__buttons .Navbar__button a:hover {
+  text-shadow: 0 5px 10px #E3E3E3;
+  color: #33B8BF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .Navbar .Navbar__buttons .Navbar__button span {
+  top: 12.5px;
+  position: relative;
+}
+
+header .Navbar .Mobile__Navbar__buttons {
+  direction: rtl;
+  text-align: right;
+  display: none;
+  position: absolute;
+  top: 100px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 740.047px) {
+  header .Navbar .Mobile__Navbar__buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-rows: 50px 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px;
+  }
+}
+
+header .Navbar .Mobile__Navbar__buttons .Mobile__Navbar__button {
+  display: inline;
+  position: relative;
+  font-size: 1.25rem;
+}
+
+header .Navbar .Mobile__Navbar__buttons .Mobile__Navbar__button a {
+  text-align: center;
+  text-decoration: none;
+  font-family: YekanRegular;
+  color: #2E5D6A;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .Navbar .Mobile__Navbar__buttons .Mobile__Navbar__button a:hover {
+  text-shadow: 0 5px 10px #E3E3E3;
+  color: #33B8BF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .Navbar .Mobile__Navbar__buttons .Mobile__Navbar__button span {
+  top: 12.5px;
+  position: relative;
+}
+
+header .Navbar .Navbar__logo {
+  display: inline;
+  z-index: 6;
+}
+
+header .Navbar .Navbar__logo img {
+  position: relative;
+  top: 25px;
+  left: 15px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media screen and (max-width: 740.047px) {
+  header .Navbar .Navbar__logo img {
+    top: 25px;
+    -webkit-transform: rotatey(360deg);
+            transform: rotatey(360deg);
+    position: fixed;
+  }
+}
+
+header .Toggle {
+  position: fixed;
+  display: none;
+  width: 35px;
+  height: 35px;
+  top: 30px;
+  right: 20px;
+  z-index: 99;
+}
+
+@media screen and (max-width: 740.047px) {
+  header .Toggle {
+    display: inline-block;
+  }
+}
+
+header .Toggle:hover {
+  cursor: pointer;
+}
+
+header .Toggle .Toggle__icon {
+  width: 35px;
+  height: 5px;
+  background-color: #2E5D6A;
+  border: 1.5px solid #33B8BF;
+  margin: 6px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 12px);
+  transform: rotate(-45deg) translate(-5px, 12px);
+}
+
+header .change .bar2 {
+  -webkit-transform: translate(200px, 0px);
+          transform: translate(200px, 0px);
+}
+
+header .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-3px, -11px);
+  transform: rotate(45deg) translate(-3px, -11px);
+}
+/*# sourceMappingURL=header.css.map */

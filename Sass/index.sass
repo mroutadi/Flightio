@@ -1,0 +1,764 @@
+@import "patterns"
+main
+  .Search
+    position: relative
+    top: -100px
+    margin-bottom: -100px
+    background-image: url("../images/bg.png")
+    background-position: center
+    background-position-x: 100%
+    height: 775px
+    z-index: 2
+    @media screen and ( max-width: 1500.0051px )
+      height: 650px
+    @media screen and ( max-width: 1300.0031px )
+      background-position-x: 80%
+    @media screen and ( max-width: 1200.0021px)
+      height: 500px
+      background-size: cover
+    @media screen and ( max-width: 740.047px )
+      margin-top: 0
+      top: 0
+    @media screen and ( max-width: 550.055px )
+      height: 400px
+      background-position-x: 75%
+      background-position-y: 50px
+    .Search__Viech
+      direction: rtl
+      background-color: $white
+      height: 115px
+      margin: 0 auto
+      width: 75%
+      text-align: center
+      position: relative
+      top: 535px
+      border-radius: 50px 50px 0 0
+      box-shadow: 0 0 30px $darkblue
+      @media screen and ( max-width: 1900.0091px )
+        width: 90%
+      @media screen and ( max-width: 1580.0851px )
+        width: 95%
+      @media screen and ( max-width: 1500.0051px )
+        top: 500px
+      @media screen and ( max-width: 1270.0721px )
+        width: 100%
+        border-radius: 0
+      @media screen and ( max-width: 1200.0021px )
+        height: 300px
+        top: 500px
+        box-shadow: 0 0 0 #000
+      @media screen and ( max-width: 1200.0021px )
+        top: 400px
+      ul
+        margin: 0 auto
+        position: relative
+        width: 90%
+        display: grid
+        grid-template-columns: 18.5% 17.5% 19.5% 14.5%
+        justify-content: space-between
+        border-bottom: 3px solid $gray
+        z-index: 3
+        @media screen and ( max-width: 1010.0101px )
+          grid-template-columns: 25% 25% 25% 25%    
+        @media screen and ( max-width: 875.578px )
+          width: 100% 
+        @media screen and ( max-width: 550.055px )
+          grid-template-columns: 50% 50%
+          grid-template-rows: 60px 60px
+        li
+          height: 100px
+          width: 100%
+          list-style: none
+          text-align: center
+          display: inline
+          @media screen and ( max-width: 750.057px )
+            height: 75px
+            width: 99%
+          @media screen and ( max-width: 550.055px )
+            height: 60px
+          .Search__li--span
+            height: 100%
+            color: $darkblue
+            text-decoration: none
+            font-family: YekanMedium
+            display: grid
+            grid-template-columns: 45% 55%
+            align-content: center
+            transition: 0.3s
+            &:hover
+              cursor: pointer
+              text-shadow: 0 5px 5px $darkgray
+              transition: 0.3s
+            .Search__Viech--logo
+              img
+              @media screen and ( max-width: 1500.0051px )
+                img
+                  transform: scale(0.7)
+              @media screen and ( max-width: 750.057px )
+                img
+                  transform: scale(0.6) 
+            .Search__Viech--text
+              position: relative
+              font-size: 1.7rem
+              @media screen and ( max-width: 1500.0051px )
+                font-size: 1.2rem
+              @media screen and ( max-width: 750.057px )
+                font-size: 0.9rem
+                grid-template-columns: 45% 50%
+                padding-top: 7.5px
+        .Search__li--selected
+          border-radius: 5% 5% 0 0
+          margin-top: -10px
+          padding: 10px 0
+          &::before
+            content: ""
+            display: block
+            width: 100%
+            border-bottom: 10px solid $darkyellow
+            border-radius: 0 0 25px 25px
+            transition: 0.3s
+          &::after
+            content: ""
+            display: block
+            margin: 0 auto
+            width: 100%
+            border-bottom: 3px solid $darkyellow
+            transition: 0.3s
+            padding-top: 10px
+            z-index: 5
+    
+    .Search__Resault
+      background-color: $white
+      position: relative
+      top: 535px
+      width: 75%
+      padding: 0 5%
+      margin: 0 auto
+      border-radius: 0 0 50px 50px
+      box-shadow: 0 0 30px $darkblue
+      &::before
+        content: ""
+        height: 30px
+        width: 100%
+        left: 0
+        position: absolute
+        top: -30px
+        background: inherit
+        z-index: 2
+      @media screen and ( max-width: 1900.0091px )
+        width: 90%
+      @media screen and ( max-width: 1580.0851px )
+        width: 95%
+      @media screen and ( max-width: 1500.0051px )
+        top: 500px
+      @media screen and ( max-width: 1270.0721px )
+        width: 100%
+        border-radius: 0
+      @media screen and ( max-width: 1200.0021px )
+        top: 200px
+        height: 250px
+        box-shadow: 0 0 0 #000
+      @media screen and ( max-width: 750.057px )
+        top: 180px
+      @media screen and ( max-width: 550.055px )
+        top: 220px
+      #Search
+        text-align: right
+        .Search__Type
+          position: relative
+          width: 150px
+          height: 50px
+          display: inline-block
+          direction: rtl
+          text-align: right
+          @media screen and ( max-width: 1200.0021px )
+            height: 60px
+          @media screen and ( max-width: 750.057px )
+            height: 40px
+          #Search__Type--Passenger, #Search__Type--isRound
+            display: none
+          .select-selected
+            background-color: $white
+            font-family: YekanRegular
+            &::after
+              position: absolute
+              content: "ᐯ"
+              top: 7.5px
+              width: 0
+              height: 0
+              border: 6px solid transparent
+              color: $darkblue
+              transition: 0.3s
+              font-weight: bold
+              transform: scale(1.1, 0.8)
+              @media screen and ( max-width: 1500.0051px )
+                transform: scale(1, 0.7)
+          .select-arrow-active
+            &::after
+              position: absolute
+              transform: rotateX(180deg) scale(1.1, 0.8)
+              top: 37.5px
+              width: 0
+              height: 0
+              border: 6px solid transparent
+              color: $darkblue
+              transition: 0.3s
+              font-weight: bold
+              font-family: YekanRegular
+          .select-items div,.select-selected
+            direction: rtl
+            color: $darkblue
+            font-size: 1.3rem
+            font-family: YekanRegular
+            padding: 5px
+            border: 1px solid transparent
+            cursor: pointer
+            @media screen and ( max-width: 1500.0051px )
+              font-size: 1rem
+          .select-items
+            position: absolute
+            background-color: $seablue
+            max-height: 220px
+            overflow-y: auto
+            top: 100%
+            left: 0
+            right: 0
+            z-index: 99
+            animation: appear
+            animation-duration: 1s
+            div
+              color: $white
+              font-family: YekanRegular
+          .select-hide
+            display: none
+          .select-items div:hover
+            background-color: rgba(0, 0, 0, 0.1)
+            color: $white
+          .same-as-selected
+            background-color: rgba(0, 0, 0, 0.3)
+        .Search__Information
+          div
+            display: inline-block
+          .Search__Information--start, .Search__Information--finish
+            display: grid
+            grid-template-columns: 35% 65%
+            align-items: center
+            div
+              border: 1px solid $darkgray
+              border-left: 0px
+              height: 60px
+              border-radius: 0 10px 10px 0
+              padding: 0px 5px
+              margin-left: -5px
+              @media screen and ( max-width: 600.006px )
+                height: 45px
+              span
+                color: $darkgray
+                font-size: 1.2rem
+                font-family: YekanRegular
+                margin: 0 2.5px
+                position: relative
+                @media screen and ( max-width: 1400.0041px )
+                  font-size: 0.95rem
+                  top: 5px
+                @media screen and ( max-width: 1207.7021px )
+                  font-size: 0.75rem
+                @media screen and ( max-width: 600.006px )
+                  top: 0
+                span
+                  font-size: 1.5rem
+                  font-family: YekanRegular
+                  position: relative
+                  top: 2.5px
+                  @media screen and ( max-width: 1400.0041px )
+                    font-size: 1.25rem
+              img
+                position: relative
+                top: 5px
+                @media screen and ( max-width: 1207.7021px )
+                  top: 7.5px
+                @media screen and ( max-width: 1400.0041px )
+                  top: 12.5px
+                @media screen and ( max-width: 600.006px )
+                  width: 20%
+                  top: 5px
+                @media screen and ( max-width: 550.055px )
+                  width: 10%
+            input
+              height: 60px
+              width: 100%
+              border-radius: 10px 0 0 10px
+              border: 1px solid $darkgray
+              border-right: 0
+              color: $darkblue
+              font-family: YekanRegular
+              font-size: 1.2rem
+              padding-bottom: 5px
+              @media screen and ( max-width: 600.006px )
+                height: 45px
+                font-size: 1rem
+              @media screen and ( max-width: 550.055px )
+                width: 80%
+          .Search__Information--change
+            text-align: center
+            &:hover
+              cursor: pointer
+              animation: rotate
+              animation-duration: 0.5s
+            img
+              @media screen and ( max-width: 600.006px )
+                transform: scale(0.8)
+              @media screen and ( max-width: 550.055px )
+                transform: scale(1)
+              @media screen and ( max-width: 550.055px )
+                transform: rotateZ(90deg)
+            @media screen and ( max-width: 550.055px )
+              text-align: left
+              &:hover
+                animation: none
+          .Search__Information--date
+            margin: 0 20px 0 15px
+            display: grid
+            grid-template-columns: 40% 60%
+            align-items: center
+            @media screen and ( max-width: 1200.0021px )
+              margin: 0
+            .Search__Information--date-logo
+              border: 1px solid $darkgray
+              border-left: 0px
+              height: 60px
+              border-radius: 0 10px 10px 0
+              padding: 0px 5px
+              margin-left: -5px
+              position: relative
+              @media screen and ( max-width: 600.006px )
+                height: 45px
+              span
+                color: $darkgray
+                font-size: 1.2rem
+                font-family: YekanRegular
+                margin: 0 2.5px
+                position: relative
+                top: 2.5px
+                @media screen and ( max-width: 1400.0041px )
+                  font-size: 0.95rem
+                  top: 5px
+                @media screen and ( max-width: 1207.7021px )
+                  font-size: 0.75rem
+                @media screen and ( max-width: 600.006px )
+                  top: 0
+                span
+                  font-size: 1.5rem
+                  font-family: YekanRegular
+                  position: relative
+                  top: 2.5px
+                  @media screen and ( max-width: 1400.0041px )
+                    font-size: 1.25rem
+              img
+                position: relative
+                top: 5px
+                @media screen and ( max-width: 1400.0041px )
+                  top: 10px
+                @media screen and ( max-width: 600.006px )
+                  width: 20%
+                  top: 10px
+                @media screen and ( max-width: 600.006px )
+                  top: 5px
+                @media screen and ( max-width: 550.055px )
+                  width: 10%
+            input#Search__Information--Date
+              height: 60px
+              width: 100%
+              border-radius: 10px 0 0 10px
+              border: 1px solid $darkgray
+              border-right: 0
+              color: $darkblue
+              font-family: YekanRegular
+              font-size: 1.2rem
+              @media screen and ( max-width: 600.006px )
+                height: 45px
+                font-size: 1rem
+          input#Search__Information--submit
+            margin: 0 15px 0 0
+            border-radius: 10px
+            height: 60px
+            background-color: $darkyellow
+            border: 0
+            font-size: 1.5rem
+            font-weight: bolder
+            text-shadow: 0 0 1px $darkblue
+            color: $darkblue
+            font-family: YekanBold
+            transition: 0.3s
+            &:hover
+              color: $seablue
+              transition: 0.3s
+              box-shadow: 0 5px 5px $darkgray
+              cursor: pointer
+            @media screen and ( max-width: 1200.0021px )
+              margin: 0
+            @media screen and ( max-width: 600.006px )
+              font-size: 1.2rem
+            @media screen and ( max-width: 600.006px )
+              height: 45px
+              font-size: 1rem
+          position: relative
+          height: 120px
+          text-align: right
+          direction: rtl
+          display: grid
+          grid-template-columns: 26% 5% 26% 23% 0% 20%
+          justify-items: stretch
+          align-items: center
+          @media screen and ( max-width: 1200.0021px )
+            height: 100px
+            grid-template-columns: 45% 10% 45%
+            grid-template-rows: 100px 100px
+          @media screen and ( max-width: 600.006px )
+            grid-template-columns: 45% 10% 45%
+            grid-template-rows: 75px 75px
+          @media screen and ( max-width: 550.055px )
+            grid-template-columns: 100%
+            grid-template-rows: 60px 0px 60px 60px 0px 60px
+  .Information
+    position: relative
+    background-color:  rgba($seablue, 0.01)
+    width: 100vw
+    z-index: 1
+    padding: 175px 12.5vw 0
+    display: grid
+    grid-template-columns: 25% 25% 25%
+    justify-content: space-between
+    margin: 0 auto
+    @media screen and ( max-width: 1200.0021px )
+      width: 90vw
+      padding-top: 450px
+    @media screen and ( max-width: 1000.0001px )
+      width: 100vw
+      padding-top: 300px
+    @media screen and ( max-width: 750.057px )
+      padding-top: 350px
+    @media screen and ( max-width: 740.047px )
+      padding-top: 450px
+    @media screen and ( max-width: 600.006px )
+      padding-top: 350px
+    @media screen and ( max-width: 550.055px )
+      padding-top: 550px
+    .Info
+      display: inline-block
+      margin: 5%
+      text-align: center
+      img
+      .Info--topic
+        color: $darkblue
+        font-size: 2rem
+        font-weight: bolder
+        text-shadow: 0 0 1px $darkblue
+        margin: 5% 0
+        font-family: YekanBold
+        @media screen and ( max-width: 1200.0021px )
+          font-size: 1.5rem
+      .Info--explain
+        color: $seablue
+        font-size: 1.3rem
+        line-height: 1.6rem
+        font-family: YekanMedium
+        @media screen and ( max-width: 1200.0021px )
+          font-size: 1rem
+  .Offers
+    position: relative
+    width: 100vw
+    padding: 1px 10vw 0
+    margin: 0 auto
+    background-color: rgba($seablue, 0.01)
+    text-align: center
+    height: 40vw
+    @media screen and ( max-width: 1600.0061px )
+      padding: 1px 5vw 0
+      height: 50vw
+    @media screen and ( max-width: 1124.4211px )
+      height: 60vw
+    @media screen and ( max-width: 700.007px )
+      height: 80vw
+    .slick-next
+      &::before
+        content: "›"
+    .slick-prev
+      &::before
+        content: "‹"
+    .slick-arrow
+      width: 4vw
+      height: 4vw
+      z-index: 5
+      background-color: $white
+      @media screen and ( max-width: 1600.0061px )
+        width:  5vw
+        height: 5vw
+      @media screen and ( max-width: 1124.4211px )
+        width: 6.75vw
+        height: 6.75vw
+      @media screen and ( max-width: 700.007px )
+        width: 8vw
+        height: 8vw
+      &:hover
+        &::before
+          color: $seablue
+          transition: 0.3s
+      &::before
+        position: relative
+        font-size: 2vw
+        color: $darkblue
+        opacity: 1
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+        transition: 0.3s
+        @media screen and ( max-width: 1600.0061px )
+          font-size: 2.2vw
+        @media screen and ( max-width: 1124.4211px )
+          font-size: 4.5vw
+        @media screen and ( max-width: 700.007px )
+          font-size: 5vw
+    .Offers__Topic
+      width: 100%
+      font-size: 2rem
+      font-weight: bolder
+      text-shadow: 0 0 1px $darkblue
+      margin: 2.5% 0
+      color: $darkblue
+      font-family: YekanBold
+      @media screen and ( max-width: 1300.0031px )
+        font-size: 1.5rem
+
+    .Offers__List
+      position: relative
+      height: 71%
+      display: block
+      .slick-list
+        height: auto
+        .slick-track
+          max-width: none
+          height: auto
+          
+          .Offers__item
+            border-radius: 10%
+            transition: 0.3s
+            margin: 15px
+            
+            .Offers__item--img
+              overflow: hidden
+              border-radius: 25px
+              transition: 0.3s
+              img
+                transition: 0.3s
+                transform: scale(1.2)
+            
+            .Offers__item--name
+              background-color: $darkyellow
+              color: $darkblue
+              opacity: 0.99
+              width: 70%
+              height: 75px
+              border-radius: 25px 25px 0 0
+              margin: 0 auto
+              padding-top: 5% 
+              line-height: 2.5rem
+              font-size: 1.8rem
+              position: relative
+              font-family: YekanBold
+              top: -75px
+              transition: 0.3s
+              @media screen and ( max-width: 1700.0071px )
+                font-size: 1.5rem
+                height: 55px
+                top: -55px
+                padding-top: 2% 
+              @media screen and ( max-width: 1400.0041px )
+                font-size: 1.3rem
+                height: 45px
+                top: -45px
+                padding-top: 1% 
+              @media screen and ( max-width: 1000.0001px )
+                height: 40px
+                top: -40px
+                padding-top: 0 
+            &:hover
+              .Offers__item--name
+                opacity: 1
+                color: $seablue
+                transition: 0.3s
+                text-shadow: 0 5px 5px $darkgray
+                cursor: pointer
+              .Offers__item--img
+                opacity: 0.8
+                transition: 0.3s
+                cursor: pointer
+
+            
+  .Offers2
+  .Subscribe
+    position: relative
+    top: 5%
+    margin: 0px auto
+    height: 550px
+    justify-content: center
+    text-align: center
+    align-content: center
+    display: grid
+    width: 100vw
+    grid-template-columns: 700px 500px
+    grid-template-rows: 100%
+    background-color: mix($seablue, $white, 10%)
+    @media screen and ( max-width: 1250.0521px )
+      height: 300px
+      padding-top: 25px
+      grid-template-columns: 700px 300px
+    @media screen and ( max-width: 1050.0501px )
+      grid-template-columns: 65% 30%
+    @media screen and ( max-width: 860.068px )
+      grid-template-columns: 100%
+      grid-template-rows: 250px 100px
+      height: 750px
+      align-content: start
+    @media screen and ( max-width: 600.006px )
+      height: 600px
+
+    .Subscribe__form
+      float: right
+      .Subscribe__label
+        position: relative
+        top: 30%
+        color: $darkblue
+        margin: 2.5% 0
+        font-size: 1.3rem
+        font-family: YekanMedium
+        line-height: 3.5rem
+        @media screen and ( max-width: 1400.0041px )
+          top: 25%
+        @media screen and ( max-width: 1250.0521px )
+          top: 17.5%
+        @media screen and ( max-width: 1080.0801px )
+          font-size: 1.1rem
+        @media screen and ( max-width: 860.068px )
+          top: 0
+          font-size: 2.9vw
+      form
+        text-align: right
+        position: relative
+        top: 25%
+        font-family: IranSans
+        display: grid
+        grid-template-columns: 30% 70%
+        @media screen and ( max-width: 1400.0041px )
+          top: 30%
+        @media screen and ( max-width: 1250.0521px )
+          top: 17.5%
+        @media screen and ( max-width: 860.068px )
+          grid-template-columns: 27.5% 67.5%
+          justify-content: center
+          top: 0
+        @media screen and ( max-width: 600.006px )
+          display: flex
+          flex-direction: column-reverse
+          text-align: center
+          padding: 0
+          margin: 0 auto
+        #S_Submit
+          background-color: $darkyellow
+          width: 220px
+          height: 70px
+          font-size: 1.5rem
+          color: $darkblue
+          border-radius: 10px
+          border: 0px
+          box-shadow: 0 10px 30px -5px $darkyellow
+          text-align: center
+          font-family: IranSans
+          transition: 0.1s
+          &:hover
+            color: $seablue
+            cursor: pointer
+            transition: 0.1s
+          @media screen and ( max-width: 1400.0041px )
+            height: 50px
+            font-size: 1.2rem
+          @media screen and ( max-width: 600.006px )
+            margin: 25px auto
+        #S_Email
+          margin: 0 0 0 30px
+          background-color: $white
+          width: 465px
+          height: 70px
+          padding: 0 2% 0 0
+          text-align: right
+          font-size: 1.2rem
+          color: $darkblue
+          border-radius: 10px
+          border: 1.5px solid $darkgray
+          font-family: IranSans
+          @media screen and ( max-width: 1400.0041px )
+            height: 50px
+            font-size: 0.8rem
+          @media screen and ( max-width: 1100.0011px )
+            padding: 0
+            margin: 0 0 0 10px
+          @media screen and ( max-width: 860.068px )
+            width: 100%
+          @media screen and ( max-width: 600.006px )
+            margin: 0 auto
+            width: 95%
+    .Subscribe__img
+      margin-left: -10px
+      padding-top: 50px
+      img
+        width: 100%
+        max-width: 425px
+        @media screen and ( max-width: 1250.0521px )
+          width: 75%
+        @media screen and ( max-width: 600.006px )
+          width: 50%
+      @media screen and ( max-width: 1250.0521px )
+        padding-top: 25px
+  .Ad
+    position: relative
+    width: 90vw
+    margin: 0 auto -5px
+    text-align: center
+    @media screen and ( max-width: 1100.0011px )
+      width: 95vw
+    @media screen and ( max-width: 800.008px )
+      width: 100vw
+    .Ad__Topic
+      color: $darkblue
+      margin: 7.5% auto
+      font-size: 2.8rem
+      direction: rtl
+      font-family: YekanBold
+      @media screen and ( max-width: 740.047px )
+        font-size: 2.2rem
+      @media screen and ( max-width: 590.095px )
+        font-size: 1.5rem
+      @media screen and ( max-width: 800.008px )
+        margin-bottom: 2.5% 0 0
+      span
+        font-size: 3.8rem
+        font-weight: bolder
+        text-shadow: 0 0 2px $darkblue
+        @media screen and ( max-width: 740.047px )
+          font-size: 3.2rem
+        @media screen and ( max-width: 590.095px )
+          font-size: 2rem
+      
+    .Ad__Places
+      display: grid
+      grid-template-columns: 15% 15% 15% 15% 15% 15%
+      align-items: end
+      justify-content: space-between
+      @media screen and ( max-width: 1100.0011px )
+        grid-template-columns: 33% 33% 33%
+        grid-template-rows: 250px 250px
+      @media screen and ( max-width: 800.008px )
+        display: flex
+        align-items: end
+      .Ad__Places--place
+        margin: 0 auto
+        @media screen and ( max-width: 800.008px )
+          flex: 

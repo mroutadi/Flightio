@@ -1,0 +1,308 @@
+@import "patterns"
+
+////////  1200  //////
+////////  420  //////
+header
+  text-align: center
+  margin: 0 auto
+  padding: 0 2.5vw
+  background-color: $white
+  border-radius: 0 0 50px 50px
+  width: 75vw
+  height: 100px
+  position: relative
+  z-index: 9
+  @media screen and ( max-width: 1070.0701px )
+    width: 100vw
+    border-radius: 0
+  @media screen and ( max-width: 740.047px )
+    position: fixed
+    height: 100px
+  .MobNav
+    @media screen and ( max-width: 740.047px )
+      display: block
+      text-align: left
+      background-color: $gray
+      position: fixed
+      width: 100vw
+      height: 100vh
+      left: 0
+      top: 0
+  .Navbar
+    display: grid
+    grid-template-columns: 170px auto 110px
+    @media screen and ( max-width: 1360.0631px )
+      grid-template-columns: 145px auto 90px
+    @media screen and ( max-width: 740.047px )
+      display: block
+      text-align: left
+    
+    .Navbar__lang
+      display: inline
+      font-size: 1.20rem
+      transition: 0.3s
+      &:hover
+        a
+          font-weight: bolder
+      
+      @media screen and ( max-width: 740.047px )
+        display: none
+      a, .lang--name
+        position: relative
+        padding: 2.5px
+        top: 30px
+        text-decoration: none
+        color: $darkblue
+        font-family: YekanRegular
+      .lang--name
+        @media screen and ( max-width: 1360.0631px )
+          top: 40px
+          font-size: 1rem
+          line-height: 0.75rem
+        @media screen and ( max-width: 1200.0021px )
+          top: 37.5px
+          font-size: 1rem
+          line-height: 0.75rem
+      a
+        font-size: 1.5rem
+        line-height: 1rem
+        font-weight: bold
+        @media screen and ( max-width: 1360.0631px )
+          top: 40px
+          font-size: 1rem
+          line-height: 0.75rem
+        @media screen and ( max-width: 1200.0021px )
+          top: 37.5px
+          font-size: 1rem
+          line-height: 0.75rem
+        &:hover
+          .tooltiptext
+            visibility: visible
+            transition: 0.3s
+            cursor: pointer
+        .tooltiptext
+          visibility: hidden
+          width: 60px
+          height: 25px
+          background-color: $darkblue
+          color: $gray
+          font-family: Arial, Helvetica, sans-serif
+          font-size: 1rem
+          text-align: center
+          border-radius: 6px
+          padding: 5px 0
+          display: inline-block
+          position: relative
+          z-index: 1
+          bottom: 30px
+          left: 20px
+          margin-left: -60px
+          transition: 0.3s
+          &::after
+            content: ""
+            transition: 0.3s
+            position: absolute
+            top: 100%
+            left: 50%
+            margin-left: -5px
+            border-width: 5px
+            border-style: solid
+            border-color: black transparent transparent transparent
+          img
+            display: none
+      img
+        position: relative
+        top: 35px
+        max-width: 30px
+        max-height: 20px
+        @media screen and ( max-width: 1360.0631px )
+          top: 45px
+        @media screen and ( max-width: 1200.0021px )
+          top: 42.5px  
+    .Mobile__Navbar__lang
+      display: none
+      font-size: 1.40rem
+      transition: 0.3s
+      position: absolute
+      text-align: center
+      bottom: 50px
+      margin: 0 auto
+      @media screen and ( max-width: 740.047px )
+        display: grid
+        justify-content: center
+        width: 100%
+        grid-template-columns: 70px 90px 40px 70px
+        align-content: center
+      &:hover
+        a
+          font-weight: bolder
+      
+      a, .mob__lang--name
+        position: relative
+        text-decoration: none
+        color: $darkblue
+        font-family: YekanRegular
+      a
+        font-size: 1.5rem
+        font-weight: bold
+        text-align: right
+        &:last-child
+          text-align: left
+        &:hover
+          .mob__tooltiptext
+            visibility: visible
+            transition: 0.3s
+            cursor: pointer
+        .mob__tooltiptext
+          visibility: hidden
+          width: 60px
+          height: 25px
+          background-color: $darkblue
+          color: $gray
+          font-family: Arial, Helvetica, sans-serif
+          font-size: 1rem
+          text-align: center
+          border-radius: 6px
+          padding: 5px 0
+          display: inline-block
+          position: relative
+          z-index: 1
+          bottom: 30px
+          left: 20px
+          margin-left: -60px
+          transition: 0.3s
+          &::after
+            content: ""
+            transition: 0.3s
+            position: absolute
+            top: 100%
+            left: 50%
+            margin-left: -5px
+            border-width: 5px
+            border-style: solid
+            border-color: black transparent transparent transparent
+          img
+            display: none
+      img
+        position: relative
+        top: 15px
+        max-width: 30px
+        max-height: 20px
+
+    .Navbar__buttons
+      direction: rtl
+      text-align: right
+      display: inline
+      @media screen and ( max-width: 740.047px )
+        display: none
+      .Navbar__button
+        display: inline
+        position: relative
+        top: 45%
+        margin: 25px
+        font-size: 1.25rem
+
+        @media screen and ( max-width: 1480.0841px )
+          font-size: 1.15rem
+          margin: 20px
+        @media screen and ( max-width: 1360.0631px )
+          font-size: 1.05rem
+          margin: 15px
+          span
+            top: 15px
+            img
+              transform: scale(0.8)
+        @media screen and ( max-width: 1260.0621px )
+          font-size: 0.95rem
+          margin: 10px
+        @media screen and ( max-width: 1200.0021px )
+          font-size: 0.9rem
+          span
+            top: 15px
+            img
+              transform: scale(0.8)
+        a
+          text-decoration: none
+          font-family: YekanRegular
+          color: $darkblue
+          transition: 0.3s
+          &:hover
+            text-shadow: 0 5px 10px $gray
+            color: $seablue
+            transition: 0.3s
+        span
+          top: 12.5px
+          position: relative
+    .Mobile__Navbar__buttons
+      direction: rtl
+      text-align: right
+      display: none
+      position: absolute
+      top: 100px
+      margin: 0 auto
+      width: 100%
+      text-align: center
+      @media screen and ( max-width: 740.047px )
+        display: grid
+        grid-template-columns: auto
+        justify-content: center
+        grid-template-rows: 50px 50px 50px 50px 50px
+      .Mobile__Navbar__button
+        display: inline
+        position: relative
+        font-size: 1.25rem
+        a
+          text-align: center
+          text-decoration: none
+          font-family: YekanRegular
+          color: $darkblue
+          transition: 0.3s
+          &:hover
+            text-shadow: 0 5px 10px $gray
+            color: $seablue
+            transition: 0.3s
+        span
+          top: 12.5px
+          position: relative
+  
+    .Navbar__logo
+      display: inline
+      z-index: 6
+      img  
+        position: relative
+        top: 25px
+        left: 15px
+        transition: 1s
+        @media screen and ( max-width: 740.047px )
+          top: 25px
+          transform: rotatey(360deg)
+          position: fixed
+  .Toggle
+    @media screen and ( max-width: 740.047px )
+      display: inline-block
+    position: fixed
+    display: none
+    width: 35px
+    height: 35px
+    top: 30px
+    right: 20px
+    z-index: 99
+    &:hover
+      cursor: pointer
+    .Toggle__icon
+      width: 35px
+      height: 5px
+      background-color: $darkblue
+      border: 1.5px solid $seablue
+      margin: 6px 0
+      transition: 0.5s
+  .change
+    .bar1
+      -webkit-transform: rotate(-45deg) translate(-5px, 12px)
+      transform: rotate(-45deg) translate(-5px, 12px)
+    .bar2
+      transform: translate(200px, 0px)
+    .bar3
+      -webkit-transform: rotate(45deg) translate(-3px, -11px)
+      transform: rotate(45deg) translate(-3px, -11px)
+    
